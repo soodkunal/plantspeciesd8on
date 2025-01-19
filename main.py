@@ -4,7 +4,7 @@ import numpy as np
 
 #tensorflow Model Prediciton
 def model_prediction(test_image):
-    model = tf.keras.models.load_model('_Leaves+dataset+for+tree+species+classification_leafsnap-dataset/leafsnap-dataset/trained_crop_model.keras.keras')
+    model = tf.keras.models.load_model(r'_Leaves+dataset+for+tree+species+classification_leafsnap-dataset/leafsnap-dataset/trained_crop_model.keras.keras')
     image=tf.keras.preprocessing.image.load_img(test_image,target_size=(128,128))
     input_arr=tf.keras.preprocessing.image.img_to_array(image)
     input_arr=np.array([input_arr]) #convert the image into batch
