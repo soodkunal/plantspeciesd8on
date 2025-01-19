@@ -1,11 +1,10 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np 
-import os
-os.chdir(r"C:\Users\HP\Documents\Hackathon crop ield prediction\_Leaves+dataset+for+tree+species+classification_leafsnap-dataset\leafsnap-dataset")
+
 #tensorflow Model Prediciton
 def model_prediction(test_image):
-    model = tf.keras.models.load_model('trained_crop_model.keras')
+    model = tf.keras.models.load_model(r'_Leaves+dataset+for+tree+species+classification_leafsnap-dataset/leafsnap-dataset/trained_crop_model.keras.keras')
     image=tf.keras.preprocessing.image.load_img(test_image,target_size=(128,128))
     input_arr=tf.keras.preprocessing.image.img_to_array(image)
     input_arr=np.array([input_arr]) #convert the image into batch
@@ -20,7 +19,7 @@ app_mode=st.sidebar.selectbox("Select Page",["Home","About","Species Recognition
 #Home Page
 if(app_mode=="Home"):
     st.header("Plant Species Recognition System")
-    image_path=r"C:\Users\HP\Documents\Hackathon crop ield prediction\Garden-Plants-1024x683.jpg"
+    image_path=r"Garden-Plants-1024x683.jpg"
     st.image(image_path,use_column_width=True)
     st.markdown(""" Welcome to the Plant Species Recognition System! 🌿🔍
     
