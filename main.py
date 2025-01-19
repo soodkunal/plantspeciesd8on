@@ -19,7 +19,7 @@ app_mode=st.sidebar.selectbox("Select Page",["Home","About","Species Recognition
 #Home Page
 if(app_mode=="Home"):
     st.header("Plant Species Recognition System")
-    image_path="Garden-Plants-1024x683.jpg"
+    image_path="Garden_plants.jpg"
     st.image(image_path,use_column_width=True)
     st.markdown(""" Welcome to the Plant Species Recognition System! 🌿🔍
     
