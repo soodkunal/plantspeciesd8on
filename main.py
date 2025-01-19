@@ -19,8 +19,8 @@ app_mode=st.sidebar.selectbox("Select Page",["Home","About","Species Recognition
 #Home Page
 if(app_mode=="Home"):
     st.header("Plant Species Recognition System")
-    image_path="Garden_plants.jpg"
-    st.image(image_path,use_column_width=True)
+    #image_path="Garden_plants.jpg"
+    st.image("Garden_plants.jpg",use_column_width=True)
     st.markdown(""" Welcome to the Plant Species Recognition System! 🌿🔍
     
     Our mission is to help in identifying plant species efficiently. Upload an image of a plant, and our system will analyze it to detect the species of plant it belongs to. Together, let's classify the plants and protect them  and contribute to a healthy ecosystem!
